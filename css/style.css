@@ -1,0 +1,108 @@
+body {
+  max-width: 680px;
+  margin: 0 auto;
+  font-size: 10pt;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  -o-hyphens: auto;
+};
+
+
+
+header {
+  text-align: center;
+};
+
+blockquote:before {
+  display: block;
+  content: "\201C";
+  font-size: 80px;
+  position: absolute;
+  left: -20px;
+  top: -20px;
+}
+
+blockquote {
+  text-align: left;
+  font-style: italic;
+}
+
+#pic {
+  float: left;
+  width: 280px;
+  height: 220px;
+  margin-right: 40px;
+}
+
+#contact{
+  margin-top: 55px;
+  margin-bottom: 35px;
+}
+
+#intro {
+  margin-top: 15px;
+}
+
+figcaption:before {
+  content: "\2014 \2009";
+}
+
+figcaption {
+  text-align: right;
+  margin-bottom: 10px;
+}
+
+
+#nav ul {
+  list-style: none;
+}
+
+#nav li {
+  display: inline;
+  margin-right: 1.1em;
+  list-style-type: none;
+}
+
+#news ul{
+  list-style-position: inside;
+  padding-left:0;
+  -webkit-padding-start: 0;
+  text-align: left;
+}
+
+#news li{
+  margin-bottom: 0.3em;
+}
+
+#experience ul{
+  list-style-position: inside;
+  padding-left:0;
+  -webkit-padding-start: 0;
+  text-align: left;
+}
+
+#experience li{
+  margin-top:0.3em;
+}
+
+#papers li {
+  margin-left: -1.5em;
+  margin-bottom: 1em;
+}
+
+dt {
+  font-weight: bold;
+}
+
+
+@media only screen and (max-width: 768px) {
+    body {
+        max-width: 800px;
+        margin: 0 auto;
+        font-size: 12pt;
+    };
+}
