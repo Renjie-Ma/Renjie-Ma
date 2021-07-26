@@ -1,181 +1,191 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Meta-learning for Bridging Labeled and Unlabeled Data in Biomedicine</title>
-
-<!-- Standard reset, fonts and grids -->
-<link rel="stylesheet" type="text/css" href="reset-fonts-grids.css">
-<!-- styles for the whole website -->
-<link href="styles.css" rel="stylesheet" type="text/css" />
-</head>  
+<!DOCTYPE html>
+     
+<html lang="en">
+<meta charset="utf-8">
    
-<body class="yui-skin-sam" id="yahoo-com">
-<div id="doc" class="yui-t1">
-<div id="hd">
-</div>
+<head>    
+  <title>Renjie Ma</title>
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-<!-- START: left column -->
-<div id="left-column">
-<br><br>
-  <!--BEGIN left_column.html -->
-  <center><a href="index.html"><img id="snap-logo" src="http://snap.stanford.edu/images/seal.gif" alt="Stanford"/></a></center>
-  <ul id="links-under-menu">
-  <li><a href="index.html#motivation">Motivation</a></li>
-  <li><a href="index.html#objectives">Objectives</a></li>
-  <li><a href="index.html#outline">Outline</a></li>
-  <li><a href="index.html#info">Info</a></li>
-  <li><a href="index.html#organizers">Presenters</a></li>
-  </ul> 
-  <!--END left_column.html -->
-</div>
-<!-- END: left column -->
-
-<!-- START: right column -->
-<div id="right-column">
-
-<br>
-
-<br>
-
-<br>
-<br>
-<div style="color:#ff8b00; font-size:28px; font-weight:bold;"><a href="https://www.iscb.org/ismbeccb2021-program/tutorials#tut1">ISMB/ECCB 2021 Tutorial</a></div><br>
-<div style="color:#ff8b00; font-size:36px; font-weight:bold;">Meta-learning for Bridging Labeled and Unlabeled Data in Biomedicine</div>
-
-<div class="call-out-green">
-<p>
-This tutorial will cover principles and recent advancements of meta-learning with the case studies designed based on their high relevance for advancing new biomedical discoveries. We will present representation learning methods that bridge labeled and unlabeled data by learning to generalize across datasets given only a few labeled examples or extremely without any labeled data. 
-</p>
-</div>
-<a href="meta_ismb.png"><img src="img/meta_ismb.png" width="700" style="display: block; margin: 0 auto;"></img><br /></a>
-
-<A name="motivation"></A>
-<h2>Tutorial goals</h2>
-
-<p>
-In biomedical domains labeled datasets are often very difficult and time-consuming to obtain, requiring a lot of costly manual effort and expert knowledge to hand-label classes before machine learning methods can even be used. This results in many scarcely labeled or completely unlabeled datasets. For instance, in protein function prediction a large number of functional labels have only a few labeled genes, or in single-cell transcriptomics novel and rare cell types appear across large, heterogeneous single-cell datasets. </p>
-
-<p>
-While machine learning methods excel on tasks with a large number of labeled datasets that can support learning of highly parameterized models, to solve central problems in biomedicine we need methods that can generalize to unseen domains and datasets given only a few labeled training examples, or in the extreme case to completely unlabeled datasets. Major advances under low-data regime tasks have been achieved by leveraging knowledge across related tasks with meta-learning, or learning to learn across tasks. The central idea behind meta-learning is to acquire prior knowledge over previous tasks so that new tasks can be efficiently learned from a small amount of data. </p>
-
-<p>
-This tutorial will cover principles and recent advancements of meta-learning with the case studies designed based on their high relevance for advancing new biomedical discoveries. We will present representation learning methods that bridge labeled and unlabeled data by learning to generalize across datasets given only a few labeled examples or extremely without any labeled data with an emphasis on interpretability. We will spend considerable amount of time to explain how can interpretability be incorporated as an essential feature in the design of the methods. The tutorial will equip participants with the ability to understand fundamentals and state-of-the-art meta-learning methods and to utilize the learned concepts and methods in their own research.
-</p>
-
-<A name="objectives"></A>
-<h2>Learning objectives</h2>
-
-<p>
-At the completion of the tutorial, the participants will gain understanding and broad knowledge about the basic concepts and recent advances in the meta-learning techniques:
-<ul>
-  <li> How can we effectively learn from scarcely labeled datasets, <i>e.g.</i>, protein functions or structures with a few labeled examples? How can we use prior knowledge to learn to generalize, <i>i.e.</i>, meta-learn?</li>
-  <li> How can we utilize knowledge from existing knowledge bases, such as Gene Ontology and Cell Ontology, to provide interpretations behind decisions based on only few-labeled examples?</li>
-  <li> How can we learn without <i>any</i> labeled examples? How can we discover new, never-before-seen categories/classes, such as rare and unseen cell types across single-cell experiments?</li>
-  <li> How can we transfer knowledge across different species, tissues, or sequencing technologies?</li>
-  <li> What fundamental open problems in biology can benefit from meta-learning techniques? How can meta-learning be applied to these problems?</li>
-  <li> What frameworks, tools and libraries are available to use meta-learning methods on new datasets and applications?   </li>
-</ul>
-</p>
-
-
-<A name="outline"></A>
-<h2>Tutorial materials and outline</h2>
-
-<p>
-Our tutorial will cover fundamental techniques and recent advances on machine learning methods that have an ability to generalize from a small number of labels, or in the extreme case without any labels. The participants will acquire knowledge of fundamental concepts and understanding how to use these methods to advance new discoveries in their own research. 
-</p>
-
-<p>
-Tutorial will be organised as a half-day tutorial. Tutorial materials will be posted on this website in early July 2021. 
-</p>
-
-<p>
-Detailed outline of the tutorial is the following:
-</p>
-<p>
-<ul>
-  <li style="font-weight:bold;">Introduction <a href="materials/intro.pdf">[slides]</a> </li>
-    <ul>
-    <li> Types of missing data problems</li>
-    <li> Basics of deep learning</li>
-    </ul>
-  <li style="font-weight:bold;">Few-shot learning part I: Meta-learning for few-shot learning  <a href="materials/fewshot-metalearning.pdf">[slides]</a></li>
-    <ul>
-    <li> Problem statement: Few-shot learning</li>
-    <li> Optimization-based methods (e.g., <a href="https://arxiv.org/pdf/1703.03400.pdf">MAML</a>)</li>
-    <li> Metric-based methods (e.g., <a href="https://www.cs.cmu.edu/~rsalakhu/papers/oneshot1.pdf">Siamese</a>, <a href="https://arxiv.org/pdf/1606.04080.pdf">MatchingNet</a>, <a href="https://arxiv.org/pdf/1703.05175.pdf">ProtoNet</a>)</li>
-    <li> <i>Applications:</i> Drug discovery and cellular response prediction </li>
-    </ul>
-  <li style="font-weight:bold;">Few-shot learning part II: Integrating side information  <a href="materials/fewshot-prior-knowledge.pdf">[slides]</a></li>
-    <ul>
-    <li> Feature level prior knowledge for interpretability (e.g. <a href="https://arxiv.org/pdf/2007.07375.pdf">COMET</a>)</li>
-   	<li> Class level prior knowledge (e.g., <a href="https://arxiv.org/pdf/1902.07104.pdf">AM3</a>, <a href="https://dl.acm.org/doi/abs/10.1145/3394486.3403230">TAdaNet</a>)</li>
-    <li> <i>Applications:</i> Interpretable cell type annotation, disease prediction </li>
-    </ul>
-  <li style="font-weight:bold;">Open-world learning  <a href="materials/open-world-learning.pdf">[slides]</a></li>
-    <ul>
-    <li> Problem statement: Open-world learning </li>
-    <li> Novel class discovery (e.g., <a href="https://www.nature.com/articles/s41592-020-00979-3">MARS</a>)
-    <li> Open-world semi-supervised learning (e.g., <a href="https://arxiv.org/pdf/2102.03526.pdf">ORCA</a>)
-    <li> <i>Applications:</i> Cell type discovery from single-cell data and multiplexed imaging technology CODEX
-    </ul>
-  <li style="font-weight:bold;">Guidelines and conclusions  <a href="materials/conclusion.pdf">[slides]</a></li>
-  	<ul>
-    <li> Tips and guidelines on available resources, libraries and tools</li>
-    <li> Demo on prototypical networks for cell type annotation  <a href="materials/prototypical-single-cell.ipynb">[ipynb]</a> </li>
-    <li> Future perspectives and concluding remarks</li>
-    </ul>
-</ul>
-</p>
-
-<A name="info"></A>
-<h2>Tutorial info</h2>
-
-<!-- <h3>Location</h3> -->
-
-<!-- <p> Tutorial will be held at <a href="https://www.iscb.org/ismb2018">ISMB conference</a> (<a href="https://www.iscb.org/ismb2018-program/ismb2018-tutorials">Grand Ballroom A</a>) in Chicago, IL on Friday, July 6 2018.</p>
-
-<p>Tutorial will start at 2:00 pm and go until 6:00 pm with a 15 min break at 4:00 pm.</p> -->
-
-<!-- <h3>Audience</h3> -->
-
-<p> Tutorial will be held at <a href="https://www.iscb.org/ismbeccb2021">ISMB/ECCB</a> conference on Friday, July 23 2021, 15:00 - 19:00 UTC.</p>
-
-<p>The tutorial is designed for researchers who would like to learn the principles of machine learning techniques that can be applied when only a limited number of labeled data is available. The tutorial will require basic prior knowledge of fundamental concepts covered in introductory machine learning classes.
-</p>
-
-<A name="organizers"></A>
-<h2>Presenters</h2>
-
-<img src="img/maria_img.jpeg" align="left" hspace="10" width="120" vspace="2" height="120"/><p><a href="https://cs.stanford.edu/~mbrbic/">Maria Brbic</a>  is a postdoctoral fellow in Computer Science at Stanford University. Her research focuses on development of computational approaches that can generalize to never-before-seen contexts and tasks with particular interest in applications in single-cell genomics. She is involved in projects at Chan Zuckerberg Biohub and Stanford Neuro-omics Initiative. She received her Bachelor's degree from University of Zagreb, Croatia, and PhD degree in Computer Science with the best PhD thesis award from University of Zagreb. During her PhD she was also conducting research at University of Tokyo and Stanford University as a Fulbright Scholar. </p><br>
-
-<img src="img/ChelseaFinn_hires.jpg" align="left" hspace="10" vspace="10" width="120" height="120"/><p><a href="https://ai.stanford.edu/~cbfinn/">Chelsea Finn</a> is an Assistant Professor of Computer Science and Electrical Engineering at Stanford University. Dr. Finn's research focuses on machine learning and robotics, with a significant focus on generalization and few-shot learning. She has pioneered work on meta-learning algorithms that can enable fast, few-shot adaptation, including the widely-used model-agnostic meta-learning algorithm.
-Her PhD thesis, <i>Learning to Learn with Gradients</i>, received the ACM Doctoral Dissertation Award, and her research more broadly has been recognized by several other awards, including the Samsung AI Researcher of the Year, the Microsoft Research Faculty Fellowship, and the MIT Technology Review 35 under 35 Award. Her work has also been covered by various media outlets, including the New York Times, Wired, and Bloomberg. Finn received her Bachelor's degree in Electrical Engineering and Computer Science at MIT and her PhD in Computer Science at UC Berkeley.<br><br>
-</p>
-
-<img src="img/Jure-12_a-400x400.jpg" align="left" hspace="10" width="120" height="120"/><p><a href="https://cs.stanford.edu/people/jure/">Jure Leskovec</a> is Associate Professor of Computer Science at Stanford University, Chief Scientist at Pinterest, and investigator at Chan Zuckerberg Biohub. Dr. Leskovec was the co-founder of a machine learning startup Kosei, which was later acquired by Pinterest. His research focuses on machine learning and data mining large social, information, and biological networks. Computation over massive data is at the heart of his research and has applications in computer science, social sciences, marketing, and biomedicine. This research has won several awards including a Lagrange Prize, Microsoft Research Faculty Fellowship, the Alfred P. Sloan Fellowship, and numerous best paper and test of time awards. It has also been featured in popular press outlets such as the New York Times and the Wall Street Journal. Leskovec received his bachelor's degree in computer science from University of Ljubljana, Slovenia, PhD in machine learning from Carnegie Mellon University and postdoctoral training at Cornell University.
-</p>
-
-<br>
-<br>
-
-</div>
-<!-- END: right column -->
-
-<div id="footer">
-<!-- you can put something here -->
-</div>
-</div>
-
-<script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+  ga('create', 'UA-74513330-1', 'auto');
+  ga('send', 'pageview');
 </script>
-<script type="text/javascript">
-try {
-var pageTracker = _gat._getTracker("UA-342639-4");
-pageTracker._trackPageview();
-} catch(err) {}</script>
+        
+</head>
+
+<body>
+  <header>
+  <img id="pic" src="images/jesse21.jpg" alt="jesse"/>
+  <h1> Renjie (Jesse) Ma</h1>
+
+  <div id="contact">
+  <p> <b> Office:</b> Machinery Building, Room 3033 </a> 
+  <p> <b> Affiliation:</b> <a href="http://en.hit.edu.cn/" target="_blank"> Harbin Institute of Technology</a>    
+  <p> <b> Address:</b> 92 West Dazhi Street, Harbin 150001, P. R. China</p>
+  <p> <b> WeChat:</b> Renjie-Ma </p> 
+  </div>
+
+
+  <ul id="nav">
+
+    <li><a href="https://scholar.google.com/citations?user=fZih-acAAAAJ&hl=en" target="_blank">[Google Scholar]</a></li>
+    <li><a href="https://twitter.com/JesseMa_HIT" target="_blank">[Twitter]</a></li>
+    <li> <a href="mailto:marenjie1994@gmail.com"target="_blank">[E-mail]</a>
+     
+
+  </ul>
+  </header>
+
+
+ <div id="intro"> 
+   
+  <p> <br> Wwelcome to my website. I am currently the final-year PhD candidate majoring in control science and engineering at 
+    <a href="http://sa.hit.edu.cn/wwwwwww/list.htm" target="_blank">School of Astronautics </a>, 
+    <a href="http://en.hit.edu.cn/" target="_blank"> Harbin Institute of Technology</a>, and also a researcher in the  
+    <a href="http://aius.hit.edu.cn/EnglishVersion/list.htm" target="_blank"> Key Laboratory of Autonomous Intelligent Unmanned Systems</a> 
+    of Ministry of Industry and Information Technology, P. R. China.  
+  </p>
+
+  <p> I have been supervised by <a href="http://homepage.hit.edu.cn/wuligang" target="_blank"> Prof. Ligang Wu</a> (Harbin Institute of Technology) 
+      and <a href="https://researchers.adelaide.edu.au/profile/peng.shi" target="_blank"> Prof./MAE. Peng Shi</a> (University of Adelaide). 
+      In 2017, I graduated from <a href="http://ea.hfut.edu.cn/" target="_blank"> School of Electrical Engineering and Automation</a>, 
+      <a href="http://en.hfut.edu.cn/" target="_blank">Hefei University of Technology</a>
+      where I received my B. Eng Degree in Automation.
+  </p> 
+
+  </div>
+
+
+  <h3 id="news"> Recent News </h3>
+  <ul id="news"> 
+    <li> May 2021: Auxiliary Teaching: "Kalman filter and H-infinity filter" <a href="Documents/Q3-Solve.pdf" target="_blank"> [Suggested Answer] </a> </li>
+    <li> March 2021: New Paper: "Data-driven distributed secure estimation against sparse adversarial attacks". </li> 
+    <li> January 2021: Plentary Talks: Prof./MAE. P. Shi introduced our recent results on "Secure Attack-Defense Control for Cyber-Physical Systems" at 
+      Shanghai University invited by Prof. Y. Wang, Chongqing University invited by Prof. X. Su, 
+      Xi'an Jiaotong University invited by Prof. C. Shen, and Shandong University invited by Prof. R. Yang [The slides will be available soon]. <\li>
+    <li> December 2020: Paper Acception: Our paper "Sparse false injection attacks reconstruction via descriptor sliding mode observers" accepted by IEEE Transactions 
+      on Automatic Control (TAC). <a href="http://aius.hit.edu.cn/2020/1214/c12934a250036/page.htm" target="_blank">[Laboratory News]</a> <\li>
+    <li> November 2020: Academic Achievement: I was the awardee of 
+      <a href="http://sa.hit.edu.cn/2020/1119/c6582a249324/page.htm" target="_blank">2020 Outstanding Student Award</a>, Harbin Institute of Technology.</li>
+    <li> October 2020: Academic Achievement: I was the awardee of 
+      <a href="http://sa.hit.edu.cn/2020/1020/c6582a247155/page.htm" target="_blank">2020 National Scholorship for Postgraduates</a>, Ministry of Education of P. R. China.</li> 
+   
+  </ul>
+
+ 
+
+
+  <h3 id="papers">Publications</h3>
+  Email <a href="mailto:marenjie1994@gmail.com"> me</a> if you have any question about my papers, or if you would like to collaborate with me.</p>
+  <ol class="papers"> 
+    
+    <li><strong> Safety assessment against adversarial attacks via deep neural networks</strong> <br/> 
+           Renjie Ma, Peng Shi, Ligang Wu.<br/>
+           Will be submitted to IEEE Transactions on Automatic Control (<b>On-going Preprint</b>) 2022.<br/>  
+    </li> 
+    
+    <li><strong> Data-driven distributed secure estimation against sparse adversarial attacks</strong> <br/> 
+           Renjie Ma, Peng Shi, Ligang Wu.<br/>
+           Submitted to IEEE Transactions on Automatic Control (<b>Under review</b>) 2021.<br/>  
+    </li> 
+    
+    <li><strong> Secure control for remote networked stochastic systems via integral sliding mode </strong> <br/> 
+           Yingxin Tian, Renjie Ma, Wensheng Luo, Zhijin Zhang, Yabin Gao, Ligang Wu.<br/>
+           Submitted to Journal of the Franklin Institute (<b>Under review</b>) 2021.<br/>  
+    </li> 
+    
+    <li><strong> Sparse false injection attacks reconstruction via descriptor sliding mode observers</strong> <br/> 
+           Renjie Ma, Peng Shi, Ligang Wu.<br/>
+           IEEE Transactions on Automatic Control 2021.<br/>
+  <a href="https://ieeexplore.ieee.org/abstract/document/9286536" target="_blank">[Available Online]</a>  
+    </li> 
+    
+    <li><strong> Secure state estimation for cyber-physical systems under sparse data injection attacks: a switched counteraction approach</strong> <br/> 
+           Renjie Ma, Peng Shi.<br/>
+           International Journal of Control 2021.<br/>
+  <a href="https://www.tandfonline.com/doi/abs/10.1080/00207179.2020.1833249" target="_blank">[Available Online]</a>  
+    </li> 
+    
+    <li><strong> Active resilient control for two‐dimensional systems under denial‐of‐service attacks</strong> <br/> 
+           Renjie Ma, Peng Shi, Ligang Wu.<br/>
+           International Journal of Robust and Nonlinear Control 2021.<br/>
+  <a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/rnc.5310" target="_blank">[Available Online]</a>  
+    </li>
+    
+    <li><strong> Resilient filtering for cyber‐physical systems under denial‐of‐service attacks</strong> <br/> 
+           Renjie Ma, Peng Shi, Zhenhuan Wang, Ligang Wu.<br/>
+           International Journal of Robust and Nonlinear Control 2020.<br/>
+  <a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/rnc.4845" target="_blank">[Available Online]</a>  
+    </li>
+    
+    <li><strong> Dissipativity-based sliding mode control of cyber-physical systems under denial-of-service attacks</strong> <br/> 
+           Renjie Ma, Peng Shi, Ligang Wu.<br/>
+           IEEE Transactions on Cybernetics 2020.<br/>
+  <a href="https://ieeexplore.ieee.org/abstract/document/9025753" target="_blank">[Available Online]</a>  
+    </li>
+
+    <li><strong> Event-triggered sliding mode control of Markovian jump systems against input saturation</strong> <br/> 
+           Renjie Ma, Xiangyu Shao, Jianxing Liu, Ligang Wu.<br/>
+         Systems and Control Letters 2019.<br/>
+  <a href="https://www.sciencedirect.com/science/article/pii/S0167691119301355" target="_blank">[Available Online]</a>  
+    </li> 
+    
+     <li><strong> Privacy-Enabled Secure Control of Fog Computing Aided Cyber-Physical Systems</strong> <br/> 
+           Renjie Ma, Jianxing Liu, Ligang Wu.<br/>
+         IECON 2019-45th Annual Conference of the IEEE Industrial Electronics Society 2019.<br/>
+  <a href="https://ieeexplore.ieee.org/abstract/document/8927690" target="_blank">[Available Online]</a>  
+    </li>
+
+  </ol>
+
+<h3 id="papers">Research Programs</h3>
+  <ol class="papers"> 
+    
+    <li><strong> Secure Estimation and Defense Control Theories and Methodologies for Cyber-Physical Systems (No. 62033005)</strong> <br/> 
+           Nature Nature Science Foundation of China (NSFC) (<b>Key Project</b>) 2021-.<br/>  
+           Major Investigater.<br/>
+    </li> 
+
+  </ol>
+
+
+  <h3 id="experience"> Research Interests </h3>
+  My academic research interests contains
+  <ul id="experience">
+    <li>  Cyber-physical systems security / reliability / repairability  </li>
+    <li>  Optimal / robust control and filtering </li> 
+    <li>  Deep optimization and machine learning </li>
+    <li>  Autonomous intelligent systems and human-machine colloboration </li>
+  </ul>
+
+
+<h3 id="news">Awards </h3>
+  <ul id="news">
+           <li> 2020 National Scholorahips for Postgraduate (No.BSY202006514), Minintry of Education of P. R. China  </li>
+           <li> 2020 Outstanding Student Awards, Harbin Institute of Technology </li> 
+           <li> 2020 National High-Level University Construction Program of China Scholarship Council (No. 202006120091)', Ministry of Education of P. R. China </li>
+           <li> 2019 International Academic Exchange Fund (No.2019276), Harbin Institute of Technology </li>
+           <li> 2017 First-Class Scholarship for Postgraduate Students, Harbin Institute of Technology <\li>
+  </ul> 
+  
+ <h3 id="news">Technical Activities </h3>
+  I act as the referee for plenty of journals/conferences individually.
+  <ul id="news">
+           <li> <a href="http://ieeecss.org/publication/transactions-automatic-control" target="_blank">IEEE Transactions on Automatic Control</a> <\li>
+           <li> <a href="http://ieeecss.org/index.php/publication/transactions-control-systems-technology" target="_blank">
+             IEEE Transactions on Control Systems Technology</a> <\li>
+           <li> <a href="https://www.ieeesmc.org/publications/transactions-on-cybernetics" target="_blank">
+             IEEE Transactions on Cybernetics</a> <\li>
+            <li> IEEE Transactions on Circuits and Systems Part I: Regular  Papers<\li> 
+            <li> IEEE Conference on Decision and Control (CDC)<\li> 
+            <li> Annual American Control Conference (ACC)<\li> 
+I was the referee of 2019 Australian Research Council Discovery Projects and Future Fellowships and 2020 CCDC Zhang-SiYing Best Paper Awards.
+
 </body>
 </html>
